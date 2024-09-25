@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hungry-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hungry-app
+  template:
+    metadata:
+      labels:
+        app: hungry-app
+    spec:
+      containers:
+      - name: busybox
+        image: busybox
+        resources:
+          requests:
+            cpu: 1k
+        command: ["sh", "-c", "echo Hello Kubernetes! && sleep 3600"]
+
