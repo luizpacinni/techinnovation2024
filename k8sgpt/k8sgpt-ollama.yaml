@@ -1,0 +1,13 @@
+apiVersion: core.k8sgpt.ai/v1alpha1
+kind: K8sGPT
+metadata:
+  name: k8sgpt-ollama
+spec:
+  ai:
+    enabled: true
+    model: llama3.1
+    backend: localai
+    baseUrl: http://192.168.68.55:11434/v1
+  noCache: false
+  version: v0.3.41
+ 
