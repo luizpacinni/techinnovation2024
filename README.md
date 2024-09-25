@@ -158,7 +158,7 @@ Para este exemplo, utilizaremos a opção de sync manual do Argo CD.
 kubectl -n argocd apply -f argocd-applications/app2.yaml
 ```
 
-# Utilizando o K8SGPT para monitorar nossas aplicações
+# 3. Utilizando o K8SGPT para monitorar nossas aplicações
 
 O K8sGPT tem a capacidade de monitorar os recursos do kubernetes e identificar potenciais problemas e recomendar soluções.
 
@@ -206,7 +206,7 @@ k8sgpt  analyze  -f  VulnerabilityReport  --explain
 ```
 
 
-# Documentação
+# 4. Documentação
 
 ### Kubernetes
 Documentação official do kubernetes: [https://kubernetes.io/docs/home/]
