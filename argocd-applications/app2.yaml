@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app2
+  namespace: argocd
+spec:
+  destination:
+    namespace: app2
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: app2
+    repoURL: https://github.com/luizpacinni/techinnovation2024/
+    targetRevision: HEAD
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+
